@@ -8,7 +8,7 @@
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
-  "author": "",
+  "author": "shanemorne@gmail.com",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
