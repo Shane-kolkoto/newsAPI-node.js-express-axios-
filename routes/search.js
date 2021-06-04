@@ -1,15 +1,17 @@
 const express = require('express')
 const axios = require('axios')
-const newsr=express.Router()
+require('dotenv').config();
+
+const newsAPI=express.Router()
 
 const api = process.env.apiKey;
 
 
 // // import .env
-require('dotenv').config();
-// console.log(process.env);
 
-newsr.post('/',async(req,res)=>{
+// console.log(process.env.apiKey);
+
+newsAPI.post('/',async(req,res)=>{
     const search=req.body.search
     // console.log(req.body.search)
 
@@ -28,4 +30,4 @@ newsr.post('/',async(req,res)=>{
 })
 
 
-module.exports=newsr
+module.exports=newsAPI

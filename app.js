@@ -1,11 +1,10 @@
-const express = require('express')
-const app=express()
+const express = require('express');
+const { min } = require('moment');
+const app = express()
+
+require('dotenv').config();
 
 const port = process.env.PORT;
-
-// // import .env
-require('dotenv').config();
-// console.log(process.env);
 
 const moment = require('moment')
 app.locals.moment = moment;
@@ -15,10 +14,22 @@ app.use(express.static('public'))
 app.set('view engine','ejs')
 app.use(express.urlencoded({ extended: true }))
 
-app.use('/',require('./routes/news'))
-app.use('/',require('./routes/search'))
+
+// Testing
+
+app.use('/news', require('./routes/testing/allNews.js'))
+
+app.use('/',require('./routes/news.js'))
+app.use('/',require('./routes/search.js'))
+
+
+
+
 
 
 app.set('views','./views')
 
-app.listen(port,()=> console.log("started"))
+app.listen(port,()=> console.log(`http://localhost:${port}`))
+
+
+

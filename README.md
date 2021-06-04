@@ -1,14 +1,13 @@
 # newsAPI-node.js-express-axios-
 A Nodejs express Newsapi http://newsapi.org
 
-## Setup .env file
-- Create a PORT
-- Get ApiKey
-
 ## Install the dependencies
 ```bash
 npm install
 ```
+## Setup .env file
+- Create a PORT
+- Get ApiKey
 
 ## Sources
 This newsApi is inspired by BNRY-challenge
